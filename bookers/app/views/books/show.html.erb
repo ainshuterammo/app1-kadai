@@ -1,7 +1,11 @@
-<% if @list.errors.any? %>
-  <%= @list.errors.count %>Book was successfully created.
+<% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+   <% end %>
 
-  
+<% if @book.save %>Book was successfully created.
+<% end %>
 
 <h2>本のタイトル</h2>
 <p><%= @book.title %></p>
