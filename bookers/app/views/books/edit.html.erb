@@ -26,6 +26,7 @@
 
 <a class="show_76327" href="/books/76327">Show</a> |
 <a class="back" href="/books">Back</a>
-
+<%= link_to "Show", book_path(@book.id) %>
+<%= link_to "Back", index_book_path(@book.id) %>
   </body>
 <% end %>
