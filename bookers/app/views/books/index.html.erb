@@ -6,7 +6,6 @@
 
   <body>
 
-
 <h1>Books</h1>
 
 <table>
@@ -32,21 +31,17 @@
    </tbody>
   </table>
 
-
-<h2>New book</h2>
-<%= form_with model: @book do |f| %>
-
-  <% if @book.errors.any? %>
-
+   <% if @book.errors.any? %>
   <%= @book.errors.count %>error prohibited this book from being saved:
-
   <ul>
     <% @book.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+      <li><%= message %></li>
     <% end %>
   </ul>
-  <% end %>
+<% end %>
 
+<h2>New book</h2>
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
 
   <div class="field">
     <label>Title</label>
@@ -63,5 +58,5 @@
   </div>
 
 </form>
-<% end %>
 </body>
+<% end %>
