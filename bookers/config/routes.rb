@@ -12,6 +12,4 @@ Rails.application.routes.draw do
   # get '/' => 'books/new'
 
 
-
-
 end

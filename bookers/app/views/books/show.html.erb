@@ -4,12 +4,14 @@
      </p>
    <% end %>
 
-
-<h2>本のタイトル</h2>
-<p><%= @book.title %></p>
-
-<h2>感想</h2>
-<p><%= @book.body %></p>
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
 
 <%= link_to "Edit", edit_book_path(@book.id) %>
 <%= "|" %>
